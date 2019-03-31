@@ -6,35 +6,37 @@
 /*   By: aponomar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 17:07:44 by aponomar          #+#    #+#             */
-/*   Updated: 2019/03/31 11:14:36 by aponomar         ###   ########.fr       */
+/*   Updated: 2019/03/31 16:15:07 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 void	ft_putchar(char c);
 
-void	rush00(int h, int w)
+void	rush00(int x, int y)
 {
-	int nowX = 1;
-	int nowY = 1;
+	int	row;
+	int	col;
 
-	while(nowX <= w)
+	col = 1;
+	row = 1;
+	while (row <= y)
 	{
-		nowY = 1;
-		while(nowY <= h)
+		col = 1;
+		while (col <= x)
 		{
-			if ((nowX == 1 && nowY == 1) ||	(nowX == w && nowY == 1) ||	(nowX == 1 && nowY == h) || (nowX == w && nowY == h))
+			if ((row == 1 && col == 1) || (row == y && col == 1) ||
+					(row == 1 && col == x) || (row == y && col == x))
 				ft_putchar('o');
-			else if ((nowX > 1 && nowX < w && nowY == 1) || (nowX > 1 && nowX < w && nowY == h))
+			else if ((row > 1 && row < y && col == 1) ||
+					(row > 1 && row < y && col == x))
 				ft_putchar('|');
-			else if ((nowX == 1 && nowY > 1 && nowY < h) ||	(nowX == w && nowY > 1 && nowY < h))
+			else if ((row == y) || (row == 1))
 				ft_putchar('-');
 			else
 				ft_putchar(' ');
-			nowY++;
+			col++;
 		}
 		ft_putchar('\n');
-		nowX++;
+		row++;
 	}
 }

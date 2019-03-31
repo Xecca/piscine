@@ -6,13 +6,16 @@
 /*   By: aponomar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 17:43:42 by aponomar          #+#    #+#             */
-/*   Updated: 2019/03/30 19:28:20 by aponomar         ###   ########.fr       */
+/*   Updated: 2019/03/31 11:16:19 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+void rush00(int x, int y);
+
 int main()
 {
-	rush00(5, 3);
+	rush00(5, 5);
 	return 0;
 }

@@ -6,11 +6,15 @@
 /*   By: aponomar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 17:07:44 by aponomar          #+#    #+#             */
-/*   Updated: 2019/03/30 19:46:52 by aponomar         ###   ########.fr       */
+/*   Updated: 2019/03/31 11:14:36 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	rush00(int h, int w)
+#include <unistd.h>
+
+void	ft_putchar(char c);
+
+void	rush00(int h, int w)
 {
 	int nowX = 1;
 	int nowY = 1;

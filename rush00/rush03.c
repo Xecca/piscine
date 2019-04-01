@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush00.c                                           :+:      :+:    :+:   */
+/*   rush03.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aponomar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/30 17:07:44 by aponomar          #+#    #+#             */
-/*   Updated: 2019/03/31 22:32:57 by aponomar         ###   ########.fr       */
+/*   Created: 2019/03/31 21:07:42 by aponomar          #+#    #+#             */
+/*   Updated: 2019/03/31 22:41:07 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,15 @@ void	negative_rush(int x, int y)
 		c = 1;
 		while (c <= x)
 		{
-			if ((r == 1 && c == 1) || (r == y && c == 1) ||
-					(r == 1 && c == x) || (r == y && c == x))
-				ft_putchar('o');
-			else if ((r == 1 && c > 1 && c < x) || (r == y && c > 1 && c < x))
-				ft_putchar('-');
-			else if ((c == 1 && r > 1 && r < y) || (c == x && r > 1 && r < y))
-				ft_putchar('|');
-			else
+			if ((r == 1 && c == 1) || (r == y && c == 1))
+				ft_putchar('A');
+			else if ((r == 1 && c == x && c > 1) ||
+					(r == y && c == x && c > 1))
+				ft_putchar('C');
+			else if (r > 1 && r < y && c > 1 && c < x)
 				ft_putchar(' ');
+			else
+				ft_putchar('B');
 			c++;
 		}
 		ft_putchar('\n');

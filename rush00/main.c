@@ -6,16 +6,16 @@
 /*   By: aponomar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 17:43:42 by aponomar          #+#    #+#             */
-/*   Updated: 2019/03/31 16:27:03 by aponomar         ###   ########.fr       */
+/*   Updated: 2019/03/31 17:12:50 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	rush00(int x, int y);
+void	rush(int x, int y);
 
 int		main(void)
 {
-	rush00(5, 3);
+	rush(5, 3);
 	return (0);
 }

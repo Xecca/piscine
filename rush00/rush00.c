@@ -6,13 +6,13 @@
 /*   By: aponomar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 17:07:44 by aponomar          #+#    #+#             */
-/*   Updated: 2019/03/31 16:15:07 by aponomar         ###   ########.fr       */
+/*   Updated: 2019/03/31 17:12:26 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	rush00(int x, int y)
+void	rush(int x, int y)
 {
 	int	row;
 	int	col;

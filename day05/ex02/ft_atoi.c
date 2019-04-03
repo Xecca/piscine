@@ -5,28 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aponomar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 20:42:39 by aponomar          #+#    #+#             */
-/*   Updated: 2019/04/01 21:29:13 by aponomar         ###   ########.fr       */
+/*   Created: 2019/04/02 14:39:12 by aponomar          #+#    #+#             */
+/*   Updated: 2019/04/02 14:39:19 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str);
+int	ft_atoi(char *str)
 {
-	int res;
-	int sign;
+	int		i;
+	long	r;
 
-	res = 0;
-	sign = 1;
-	while (('-' == (*str)) || ((*str) == '+'))
+	i = 1;
+	r = 0;
+	while ((*str == ' ') || (*str >= 9 && *str <= 13))
+		str++;
+	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-			sign = sign * -1;
+			i = -1;
 		str++;
 	}
-	while ((*str >= '0') && (*str <= '9'))
+	while (*str >= '0' && *str <= '9')
 	{
-		res = (res * 10) + ((*str) - '0');
+		r = r * 10 + (*str - '0');
 		str++;
 	}
-	return (res * sign);
+	return (i * (int)r);
 }

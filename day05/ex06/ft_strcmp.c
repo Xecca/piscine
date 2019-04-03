@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aponomar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/01 17:50:07 by aponomar          #+#    #+#             */
-/*   Updated: 2019/04/02 14:42:04 by aponomar         ###   ########.fr       */
+/*   Created: 2019/04/02 18:52:08 by aponomar          #+#    #+#             */
+/*   Updated: 2019/04/02 20:06:50 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar();
-
-void	ft_putnbr(int nb)
+int	ft_strcmp(char *s1, char *s2)
 {
-	if (nb == -2147483648)
+	int i;
+
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		ft_putnbr(147483648);
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
 	}
-	else if (nb < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(nb * (-1));
-	}
-	else
-	{
-		if (nb >= 10)
-			ft_putnbr(nb / 10);
-		ft_putchar((nb % 10) + '0');
-	}
+	return (s1[i] - s2[i]);
 }

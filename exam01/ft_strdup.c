@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   only_z.c                                           :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aponomar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 13:29:35 by aponomar          #+#    #+#             */
-/*   Updated: 2019/04/05 13:41:33 by aponomar         ###   ########.fr       */
+/*   Created: 2019/04/12 10:47:05 by aponomar          #+#    #+#             */
+/*   Updated: 2019/04/12 11:04:14 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-int	main(void)
+char	*ft_strdup(char *src)
 {
-	write(1, "z", 1);
+	char *s;
+	int	len;
+
+	len = 0;
+	while (src[len])
+		len++;
+	if (!(s = (char *)malloc(sizeof(char) * (len + 1))))
+		return (NULL);
+	s[len] = '\0';
+	while (len >= 0)
+	{
+		s[len] = src[len];
+		len--;
+	}
+	return (s);
 }

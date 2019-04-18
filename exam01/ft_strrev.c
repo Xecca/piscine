@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   only_z.c                                           :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aponomar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 13:29:35 by aponomar          #+#    #+#             */
-/*   Updated: 2019/04/05 13:41:33 by aponomar         ###   ########.fr       */
+/*   Created: 2019/04/16 01:21:44 by aponomar          #+#    #+#             */
+/*   Updated: 2019/04/16 01:24:12 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(void)
+char	*ft_strrev(char *str)
 {
-	write(1, "z", 1);
+	int	i;
+	int len;
+	char tmp;
+
+	len = 0;
+	while (str[len])
+		len += 1;
+	i = -1;
+	while (++i < --len)
+	{
+		tmp = str[i];
+		str[i] = str[len];
+		str[len] = tmp;
+	}
+	str[i] = '\0';
+	return (str);
 }

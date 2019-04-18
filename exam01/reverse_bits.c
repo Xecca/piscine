@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   only_z.c                                           :+:      :+:    :+:   */
+/*   reverse_bits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aponomar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 13:29:35 by aponomar          #+#    #+#             */
-/*   Updated: 2019/04/05 13:41:33 by aponomar         ###   ########.fr       */
+/*   Created: 2019/04/15 23:05:25 by aponomar          #+#    #+#             */
+/*   Updated: 2019/04/15 23:08:27 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(void)
+unsigned char reverse_bits(unsigned char b)
 {
-	write(1, "z", 1);
+	unsigned char	r = 0;
+	unsigned		char_len = 8;
+
+	while (char_len--)
+	{
+		r = (r << 1) | (b & 1);
+		b >>= 1;
+	}
+	return (r);
 }
